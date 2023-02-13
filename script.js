@@ -41,9 +41,15 @@ function desencriptar(stringDesencriptado){
     return stringDesencriptado
 }
 
-function btncopiar(){
+function btnCopiar(){
     const textoEncriptado = mensaje.value
     textArea.value = textoEncriptado
+    mensaje.value = ""
+    mensaje.style.backgroundImage = "url(img/Muñeco.png)"
+}
+
+function btnActualizar(){
+    textArea.value = ""
     mensaje.value = ""
     mensaje.style.backgroundImage = "url(img/Muñeco.png)"
 }
