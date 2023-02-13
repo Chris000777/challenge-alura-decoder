@@ -8,17 +8,17 @@
 .logo{
     padding-top: 10px;
     margin-left: 10px;
-    width: 10%;
+    width: 9%;
 }
 main{
-    display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 40px 80px;
 }
 .text-area{
     border: none;
     color: #0A3871;
-    margin-top: 90px;
+    margin-top: 20px;
     text-transform: lowercase;
 }
 ::placeholder { color: #0A3871; }
@@ -34,9 +34,9 @@ main{
     border-radius: 24px;
     color: #0A3871;
     margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
-    /* position: fixed; */
+    padding: 10px;
+    position: absolute;
+    top: 40px;
 }
 .mensaje:focus{
     outline: none;
@@ -44,7 +44,6 @@ main{
 .botones{
     display: flex;
     margin-top: 18px;
-
 }
 .btn-desencriptar {
     background: #D8DFE8;
@@ -52,7 +51,7 @@ main{
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    height: 67px;
+    height: 60px;
     margin-left: 30px;
     width: 328px;
 }
@@ -62,8 +61,8 @@ main{
     border-radius: 24px;
     color: white;
     cursor: pointer;
-    height: 67px;
-    margin-left: 30px;
+    height: 60px;
+    /* margin-left: 30px; */
     width: 328px;
 }
 .btn-copiar{
@@ -71,9 +70,9 @@ main{
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    height: 67px;
+    height: 60px;
     margin-left: 108px;
-    /* margin-top: 480px; */
+    margin-top: 520px;
     position:absolute;
     width: 336px;
     /* position: fixed;
@@ -81,5 +80,6 @@ main{
 }
 .informacion {
     color: #495057;
-    font-size: 18px;
+    font-size: 16px;
+    /* margin-left: 30px; */
 }
