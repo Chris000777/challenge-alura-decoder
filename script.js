@@ -57,7 +57,7 @@ function btnCopiar(){
     mensaje.style.backgroundImage = "url(img/Muñeco.png), url(img/Texto.png)"
 }
 
-function btnBorrar(){
+function btnActualizar(){
     textArea.value = ""
     mensaje.value = ""
     mensaje.style.backgroundImage = "url(img/Muñeco.png), url(img/Texto.png)"
