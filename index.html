@@ -22,15 +22,15 @@
                 <h6 class="informacion"><i class="fa-solid fa-circle-exclamation fa-xs"></i> Solo letras minúsculas y sin acento</h6>
             </div>
             <div class="botones">
-                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                <button class="btn-encriptar" onclick="mostrar();btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="mostrar();btnDesencriptar()">Desencriptar</button>
             </div>
         </section>
         <section>
-            <textarea class="mensaje" cols="20" rows="14"></textarea>
+            <textarea class="mensaje" cols="20" rows="14" readonly></textarea>
             <div>
-                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
-                <button class="btn-actualizar" onclick="btnActualizar()">Actualizar</button>
+                <button class="btn-copiar" onclick="btnCopiar();ocultar()">Copiar</button>
+                <button class="btn-actualizar" onclick="btnBorrar();ocultar()">Borrar</button>
             </div>
         </section>
     </main>

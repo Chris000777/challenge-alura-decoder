@@ -1,5 +1,7 @@
-const textArea= document.querySelector(".text-area");
-const mensaje= document.querySelector(".mensaje");
+const textArea = document.querySelector(".text-area");
+const mensaje = document.querySelector(".mensaje");
+const copiar = document.querySelector(".btn-copiar");
+const actualizar = document.querySelector(".btn-actualizar");
 
 function btnEncriptar(){
     if (textArea.value != ""){
@@ -12,7 +14,14 @@ function btnEncriptar(){
 
 function encriptar(stringEncriptado){
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    let listaAcentos = ["á","é","í","ó","ú"]
+    for(let i=0; i < listaAcentos.length; i++){
+        if(stringEncriptado.includes(listaAcentos[i])){
+            alert("Los acentos serán eliminados al momento de la encriptación")
+        }
+    }
     stringEncriptado = stringEncriptado.toLowerCase()
+    stringEncriptado = stringEncriptado.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     for(let i = 0; i < matrizCodigo.length; i++){
         if(stringEncriptado.includes(matrizCodigo[i][0])){
             stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
@@ -45,11 +54,23 @@ function btnCopiar(){
     const textoEncriptado = mensaje.value
     textArea.value = textoEncriptado
     mensaje.value = ""
-    mensaje.style.backgroundImage = "url(img/Muñeco.png)"
+    mensaje.style.backgroundImage = "url(img/Muñeco.png), url(img/Texto.png)"
 }
 
-function btnActualizar(){
+function btnBorrar(){
     textArea.value = ""
     mensaje.value = ""
-    mensaje.style.backgroundImage = "url(img/Muñeco.png)"
+    mensaje.style.backgroundImage = "url(img/Muñeco.png), url(img/Texto.png)"
+}
+
+function mostrar(){
+    if(textArea.value != "" && mensaje.value == ""){
+        copiar.style.display = "initial"
+        actualizar.style.display = "initial"
+    }
+}
+
+function ocultar(){
+    copiar.style.display = "none"
+    actualizar.style.display = "none"
 }
